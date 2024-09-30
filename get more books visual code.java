@@ -226,10 +226,6 @@ void left() {
   fill(1000, 1000, 0);
   ellipse(10, 10, 200, 200);
 
-  if (bookTwo==1) {
-    book2.remove();
-  }
-
   libraryHall = sk.addButton("libraryHall")
     .setPosition(300, 400)
     .setSize(100, 200);
@@ -520,10 +516,6 @@ void bookshelf1() {
     space = space + 15;
   }
 
-  home = sk.addButton("home")
-    .setPosition(330, 10)
-    .setSize(50, 30);
-
   book1 = sk.addButton("book1")
     .setPosition(405, 60)
     .setSize(15, 80);
@@ -580,11 +572,17 @@ void book1() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
 
 void book2() {
   book2.remove();
-
   bookTwo++;
 
   if (bookTwo >= 2) {
@@ -592,6 +590,13 @@ void book2() {
     bookTwo--;
   } else {
     println("you have " + (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen) + " books");
+
+
+    if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+      home = sk.addButton("home")
+        .setPosition(330, 10)
+        .setSize(50, 30);
+    }
   }
 
   stroke(230, 235, 190);
@@ -618,6 +623,13 @@ void book3() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
 
 void book4() {
@@ -637,6 +649,13 @@ void book4() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
 
 void book5() {
@@ -656,6 +675,13 @@ void book5() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
 
 void book6() {
@@ -675,6 +701,13 @@ void book6() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
 
 void book7() {
@@ -694,6 +727,13 @@ void book7() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
 void book8() {
   book8.remove();
@@ -712,7 +752,15 @@ void book8() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
+
 void book9() {
   book9.remove();
 
@@ -730,6 +778,13 @@ void book9() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
 void book10() {
   book10.remove();
@@ -748,6 +803,13 @@ void book10() {
   rect(10, 10, 150, 38);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 10, 30);
+
+
+  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
+    home = sk.addButton("home")
+      .setPosition(330, 10)
+      .setSize(50, 30);
+  }
 }
 
 void finish() {
