@@ -114,56 +114,86 @@ void keyReleased() {
      book8.remove();
      book9.remove();
      book10.remove();
-     
+    
     if(bookOne == 1){
       fill(0,0,1000);
       stroke(10,10,10);
     rect(100,100,60,90);
+    fill(10,10,10);
+    textSize(20);
+    text("book1",110,145);
   }
       if(bookTwo == 1){
       fill(0,1000,0);
       stroke(10,10,10);
     rect(200,100,60,90);
+        fill(10,10,10);
+    textSize(20);
+    text("book2",210,145);
   }
         if(bookThree == 1){
       fill(0,1000,0);
       stroke(10,10,10);
     rect(300,100,60,90);
+            fill(10,10,10);
+    textSize(20);
+    text("book3",310,145);
   }
         if(bookFour == 1){
       fill(175, 100, 255);
       stroke(10,10,10);
     rect(400,100,60,90);
+            fill(10,10,10);
+    textSize(20);
+    text("book4",410,145);
   }
         if(bookFive == 1){
       fill(175, 100, 255);
       stroke(10,10,10);
     rect(500,100,60,90);
+            fill(10,10,10);
+    textSize(20);
+    text("book5",510,145);
   }
         if(bookSix == 1){
       fill(75, 150, 0);
       stroke(10,10,10);
     rect(100,300,60,90);
+    fill(10,10,10);
+    textSize(20);
+    text("book6",110,345);
   }
         if(bookSeven == 1){
       fill(0,0,1000);
       stroke(10,10,10);
     rect(200,300,60,90);
+    fill(10,10,10);
+    textSize(20);
+    text("book7",210,345);
   }
         if(bookEight == 1){
       fill(100, 175, 255);
       stroke(10,10,10);
     rect(300,300,60,90);
+        fill(10,10,10);
+    textSize(20);
+    text("book8",310,345);
   }
         if(bookNine == 1){
       fill(75, 150, 0);
       stroke(10,10,10);
     rect(400,300,60,90);
+        fill(10,10,10);
+    textSize(20);
+    text("book9",410,345);
   }
         if(bookTen == 1){
       fill(100, 175, 255);
       stroke(10,10,10);
     rect(500,300,60,90);
+        fill(10,10,10);
+    textSize(20);
+    text("book10",505,345);
   }
   } else {
     println("close");
@@ -359,7 +389,7 @@ void home() {
   fill(114, 70, 70);
   rect(410, 550, 230, 60);
 
-
+textSize(30);
   fill(10, 10, 10);
   text(bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen + " / 10 books", 50, 50);
 
@@ -437,6 +467,7 @@ void bookshelf1() {
   leave.remove();
   bookshelf1.remove();
 
+textSize(30);
   stroke(10,10,10);
   fill(150, 75, 0);
   rect(0, 600, 699, 699);
