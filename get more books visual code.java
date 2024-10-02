@@ -20,8 +20,11 @@ Button book8;
 Button book9;
 Button book10;
 Button finish;
+Button done;
 
 PImage img;
+
+int inventory = 0;
 
 int bookOne = 0;
 int bookTwo = 0;
@@ -87,6 +90,85 @@ void setup() {
 }
 
 void draw() {
+}
+
+void keyReleased() {
+  if (inventory == 0) {
+    inventory = 1;
+    println("open");
+          fill(10,10,10,200);
+          stroke(10,10,10,0);
+    rect(30,30,640,610);
+    
+      bookshelf1 = sk.addButton("bookshelf1")
+    .setPosition(630, 620)
+    .setSize(50, 40);
+    
+     book1.remove();
+     book2.remove();
+     book3.remove();
+     book4.remove();
+     book5.remove();
+     book6.remove();
+     book7.remove();
+     book8.remove();
+     book9.remove();
+     book10.remove();
+     
+    if(bookOne == 1){
+      fill(0,0,1000);
+      stroke(10,10,10);
+    rect(100,100,60,90);
+  }
+      if(bookTwo == 1){
+      fill(0,1000,0);
+      stroke(10,10,10);
+    rect(200,100,60,90);
+  }
+        if(bookThree == 1){
+      fill(0,1000,0);
+      stroke(10,10,10);
+    rect(300,100,60,90);
+  }
+        if(bookFour == 1){
+      fill(175, 100, 255);
+      stroke(10,10,10);
+    rect(400,100,60,90);
+  }
+        if(bookFive == 1){
+      fill(175, 100, 255);
+      stroke(10,10,10);
+    rect(500,100,60,90);
+  }
+        if(bookSix == 1){
+      fill(75, 150, 0);
+      stroke(10,10,10);
+    rect(100,300,60,90);
+  }
+        if(bookSeven == 1){
+      fill(0,0,1000);
+      stroke(10,10,10);
+    rect(200,300,60,90);
+  }
+        if(bookEight == 1){
+      fill(100, 175, 255);
+      stroke(10,10,10);
+    rect(300,300,60,90);
+  }
+        if(bookNine == 1){
+      fill(75, 150, 0);
+      stroke(10,10,10);
+    rect(400,300,60,90);
+  }
+        if(bookTen == 1){
+      fill(100, 175, 255);
+      stroke(10,10,10);
+    rect(500,300,60,90);
+  }
+  } else {
+    println("close");
+    inventory = 0;
+  }
 }
 
 void talk() {
@@ -285,144 +367,6 @@ void home() {
     println("we got no books, go get more!");
   }
 
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==1) {
-    fill(0, 0, 1000);
-    rect(410, 60, 15, 80);
-    println("1 book, nine more!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==2) {
-    fill(0, 0, 1000);
-    rect(425, 60, 15, 80);
-    rect(410, 60, 15, 80);
-    println("2 books, eight more!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==3) {
-    fill(0, 0, 1000);
-    rect(425, 60, 15, 80);
-    rect(410, 60, 15, 80);
-    fill(175, 100, 255);
-    rect(440, 60, 15, 80);
-    println("3 books, seven more!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==4) {
-    fill(0, 0, 1000);
-    rect(410, 60, 15, 80);
-    rect(425, 60, 15, 80);
-    fill(175, 100, 255);
-    rect(440, 60, 15, 80);
-    rect(455, 60, 15, 80);
-    println("4 books, six more!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==5) {
-    fill(0, 0, 1000);
-    rect(410, 60, 15, 80);
-    rect(425, 60, 15, 80);
-    fill(175, 100, 255);
-    rect(440, 60, 15, 80);
-    rect(455, 60, 15, 80);
-    fill(0, 1000, 0);
-    rect(470, 60, 15, 80);
-    println("5 books! half way there!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==6) {
-    fill(0, 0, 1000);
-    rect(410, 60, 15, 80);
-    rect(425, 60, 15, 80);
-    fill(175, 100, 255);
-    rect(440, 60, 15, 80);
-    rect(455, 60, 15, 80);
-    fill(0, 1000, 0);
-    rect(470, 60, 15, 80);
-    rect(485, 60, 15, 80);
-    println("6 books, four more!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==7) {
-    fill(0, 0, 1000);
-    rect(410, 60, 15, 80);
-    rect(425, 60, 15, 80);
-    fill(175, 100, 255);
-    rect(440, 60, 15, 80);
-    rect(455, 60, 15, 80);
-    fill(0, 1000, 0);
-    rect(470, 60, 15, 80);
-    rect(485, 60, 15, 80);
-    fill(75, 150, 0);
-    rect(500, 60, 15, 80);
-    println("7 books, only three more!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==8) {
-    fill(0, 0, 1000);
-    rect(410, 60, 15, 80);
-    rect(425, 60, 15, 80);
-    fill(175, 100, 255);
-    rect(440, 60, 15, 80);
-    rect(455, 60, 15, 80);
-    fill(0, 1000, 0);
-    rect(470, 60, 15, 80);
-    rect(485, 60, 15, 80);
-    fill(75, 150, 0);
-    rect(500, 60, 15, 80);
-    rect(515, 60, 15, 80);
-    println("8 books, only two more!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==9) {
-    fill(0, 0, 1000);
-    rect(410, 60, 15, 80);
-    rect(425, 60, 15, 80);
-    fill(175, 100, 255);
-    rect(440, 60, 15, 80);
-    rect(455, 60, 15, 80);
-    fill(0, 1000, 0);
-    rect(470, 60, 15, 80);
-    rect(485, 60, 15, 80);
-    fill(75, 150, 0);
-    rect(500, 60, 15, 80);
-    rect(515, 60, 15, 80);
-    fill(100, 175, 255);
-    rect(530, 60, 15, 80);
-    println("9 books, only one more!");
-  }
-
-  if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen ==10) {
-    fill(0, 0, 1000);
-    rect(410, 60, 15, 80);
-    rect(425, 60, 15, 80);
-    fill(175, 100, 255);
-    rect(440, 60, 15, 80);
-    rect(455, 60, 15, 80);
-    fill(0, 1000, 0);
-    rect(470, 60, 15, 80);
-    rect(485, 60, 15, 80);
-    fill(75, 150, 0);
-    rect(500, 60, 15, 80);
-    rect(515, 60, 15, 80);
-    fill(100, 175, 255);
-    rect(530, 60, 15, 80);
-    rect(545, 60, 15, 80);
-    fill(1000, 1000, 1000);
-    rect(350, 440, 330, 150);
-    rect(350, 440, 70, 30);
-    fill(10, 10, 10);
-    textSize(20);
-    text("shmingo", 355, 445, 400, 200);
-    textSize(30);
-    text("you found all ten books! ", 355, 475, 400, 200);
-    text("this is insane!", 355, 515, 400, 200);
-    text("great job!", 355, 555, 400, 200);
-
-    finish = sk.addButton("finish")
-      .setPosition(260, 200)
-      .setSize(50, 30);
-  }
-
 
   leave = sk.addButton("leave")
     .setPosition(330, 10)
@@ -471,6 +415,17 @@ void libraryHall() {
     rect(bungo, 60, 15, 80);
     bungo = bungo + 15;
   }
+  
+      fill(1000, 1000, 1000);
+  rect(350, 440, 330, 150);
+  rect(350, 440, 70, 30);
+  fill(10, 10, 10);
+  textSize(20);
+  text("shmingo", 355, 445, 400, 200);
+  textSize(30);
+  text("remember: ", 355, 470, 400, 200);
+    text("make sure the books are not  ", 355, 500, 400, 200);
+    text("blue when you leave! ", 355, 530, 400, 200);
 
   bookshelf1 = sk.addButton("bookshelf1")
     .setPosition(100, 200)
@@ -482,6 +437,7 @@ void bookshelf1() {
   leave.remove();
   bookshelf1.remove();
 
+  stroke(10,10,10);
   fill(150, 75, 0);
   rect(0, 600, 699, 699);
   fill(130, 80, 80);
@@ -575,7 +531,7 @@ void book1() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
@@ -593,7 +549,7 @@ void book2() {
 
 
     if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-      home = sk.addButton("home")
+      done = sk.addButton("done")
         .setPosition(330, 10)
         .setSize(50, 30);
     }
@@ -626,7 +582,7 @@ void book3() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
@@ -652,7 +608,7 @@ void book4() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
@@ -678,7 +634,7 @@ void book5() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
@@ -704,7 +660,7 @@ void book6() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
@@ -730,7 +686,7 @@ void book7() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
@@ -755,7 +711,7 @@ void book8() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
@@ -781,7 +737,7 @@ void book9() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
@@ -806,15 +762,106 @@ void book10() {
 
 
   if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen == 10) {
-    home = sk.addButton("home")
+    done = sk.addButton("done")
       .setPosition(330, 10)
       .setSize(50, 30);
   }
 }
 
-void finish() {
-  finish.remove();
-  leave.remove();
+void done() {
+  done.remove();
+  if (inventory <= 3) {
+    book1.remove();
+    book2.remove();
+    book3.remove();
+    book4.remove();
+    book5.remove();
+    book6.remove();
+    book7.remove();
+    book8.remove();
+    book9.remove();
+    book10.remove();
+  }
+  
+  background(230, 235, 190);
+  stroke(10, 10, 10);
+  fill(150, 75, 0);
+  rect(1, 600, 697, 697);
+  fill(130, 80, 80);
+  rect(400, 50, 250, 570);
+  fill(150, 75, 75);
+  rect(410, 60, 230, 550);
+  strokeWeight(1);
+  line(640, 150, 410, 150);
+  line(640, 140, 410, 140);
+  line(640, 240, 410, 240);
+  line(640, 250, 410, 250);
+  line(640, 340, 410, 340);
+  line(640, 350, 410, 350);
+  line(640, 440, 410, 440);
+  line(640, 450, 410, 450);
+  line(640, 540, 410, 540);
+  line(640, 550, 410, 550);
+  fill(10, 10, 10);
+  rect(60, 90, 320, 320);
+  fill(0, 255, 255);
+  rect(70, 100, 300, 300);
+  line(220, 240, 220, 90);
+  line(380, 260, 60, 260);
+  fill(1000, 1000, 1000);
+  rect(100, 250, 160, 250);
+  rect(130, 150, 100, 100);
+  line(200, 225, 160, 225);
+  line(240, 690, 240, 500);
+  line(120, 690, 120, 500);
+  line(40, 300, 100, 300);
+  line(260, 300, 325, 300);
+  line(40, 300, 40, 450);
+  line(325, 300, 325, 450);
+  fill(1000, 1000, 1000);
+  rect(100, 250, 160, 250);
+  ellipse(150, 170, 10, 10);
+  ellipse(200, 180, 10, 10);
+  fill(114, 70, 70);
+  rect(410, 550, 230, 60);
+
+  
+    if (bookOne + bookTwo + bookThree + bookFour + bookFive + bookSix + bookSeven + bookEight + bookNine + bookTen >=10) {
+    fill(0, 0, 1000);
+    rect(410, 60, 15, 80);
+    rect(425, 60, 15, 80);
+    fill(175, 100, 255);
+    rect(440, 60, 15, 80);
+    rect(455, 60, 15, 80);
+    fill(0, 1000, 0);
+    rect(470, 60, 15, 80);
+    rect(485, 60, 15, 80);
+    fill(75, 150, 0);
+    rect(500, 60, 15, 80);
+    rect(515, 60, 15, 80);
+    fill(100, 175, 255);
+    rect(530, 60, 15, 80);
+    rect(545, 60, 15, 80);
+    fill(1000, 1000, 1000);
+    rect(350, 440, 330, 150);
+    rect(350, 440, 70, 30);
+    fill(10, 10, 10);
+    textSize(20);
+    text("shmingo", 355, 445, 400, 200);
+    textSize(30);
+    text("you found all ten books! ", 355, 475, 400, 200);
+    text("this is insane!", 355, 515, 400, 200);
+    text("great job!", 355, 555, 400, 200);
+
+    finish = sk.addButton("finish")
+      .setPosition(260, 200)
+      .setSize(50, 30);
+  }
+  
+}
+
+void finish(){
+   finish.remove();
   background(1000, 1000, 1000);
-  image(img, 100, 100);
+  image(img, 100, 100); 
 }
